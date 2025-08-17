@@ -22,6 +22,13 @@ import {
 // Gallery images from public folder
 
 const galleryImages = [
+  // New visualization images (featured first)
+  { src: "/images/IMG_0277_new.webp", alt: "Interiér bytu - obývacia izba (vizualizácia)" },
+  { src: "/images/IMG_0288_new.webp", alt: "Lodžia s výhľadom (vizualizácia)" },
+  { src: "/images/IMG_0295_new.webp", alt: "Spálňa - detail (vizualizácia)" },
+  { src: "/images/IMG_0298_new.webp", alt: "Kuchyňa - detail (vizualizácia)" },
+  
+  // Original apartment photos
   { src: "/images/IMG_0277.jpg", alt: "Interiér bytu - obývacia izba" },
   { src: "/images/IMG_0279.jpg", alt: "Kuchyňa s jedálenským kútom" },
   { src: "/images/IMG_0281.jpg", alt: "Spálňa s veľkými oknami" },
