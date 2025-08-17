@@ -27,6 +27,11 @@ const galleryImages = [
   { src: "/images/IMG_0288_new.webp", alt: "Lodžia s výhľadom (vizualizácia)" },
   { src: "/images/IMG_0295_new.webp", alt: "Spálňa - detail (vizualizácia)" },
   { src: "/images/IMG_0298_new.webp", alt: "Kuchyňa - detail (vizualizácia)" },
+  { src: "/images/IMG_0281_new.webp", alt: "Spálňa s veľkými oknami (vizualizácia)" },
+  { src: "/images/IMG_0283_new.webp", alt: "Kúpeľňa s vaňou (vizualizácia)" },
+  { src: "/images/IMG_0285_new.webp", alt: "Druhá izba (vizualizácia)" },
+  { src: "/images/IMG_0291_new.webp", alt: "Druhá kúpeľňa (vizualizácia)" },
+  { src: "/images/IMG_0293_new.webp", alt: "Kuchynské spotrebiče (vizualizácia)" },
   
   // Original apartment photos
   { src: "/images/IMG_0277.jpg", alt: "Interiér bytu - obývacia izba" },
@@ -153,12 +158,11 @@ const Index = () => {
                 </p>
                 <p>
                   Súčasťou bytu je aj priestranná lodžia (11 m²) orientovaná na severozápad, ktorá umožňuje osadenie klimatizácie. 
-                  Byt prešiel kompletnou rekonštrukciou elektrických rozvodov a stien pred približne 10 rokmi, disponuje 
-                  plastovými oknami a PVC podlahami. Vykurovanie a ohrev vody zabezpečuje vlastný plynový kotol.
+                  Byt disponuje plastovými oknami a PVC podlahami, inak je v pôvodnom stave. Vykurovanie a ohrev vody zabezpečuje vlastný plynový kotol.
                 </p>
                 <p>
                   Bytový dom je tehlový, zateplený a má novú strechu. Hrubé tehlové steny (cca 50 cm) poskytujú výborný 
-                  tepelný a akustický komfort. K bytu patrí pivničná kobka (2 m²). Rezidenti môžu parkovať zdarma 
+                  tepelný a akustický komfort. K bytu patrí pivničná kobka (1 m²). Rezidenti môžu parkovať zdarma 
                   vo vnútrobloku; v okolí platí rezidenčné parkovanie.
                 </p>
               </div>

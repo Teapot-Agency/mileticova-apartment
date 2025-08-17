@@ -18,8 +18,17 @@ Modern React-based apartment listing website built using the **padpal-finder** t
 ```
 /Users/patrik/Desktop/Stuff/Miletičova 2025/Web/
 ├── public/
-│   ├── images/               # 24 apartment photos + floor plan
-│   │   ├── IMG_0277.jpg     # Living room photos
+│   ├── images/               # 33 apartment photos + floor plan + visualizations
+│   │   ├── IMG_0277_new.webp # Living room visualization (main preview)
+│   │   ├── IMG_0288_new.webp # Balcony visualization
+│   │   ├── IMG_0295_new.webp # Bedroom visualization
+│   │   ├── IMG_0298_new.webp # Kitchen visualization
+│   │   ├── IMG_0281_new.webp # Bedroom with large windows visualization
+│   │   ├── IMG_0283_new.webp # Bathroom with bathtub visualization
+│   │   ├── IMG_0285_new.webp # Second room visualization
+│   │   ├── IMG_0291_new.webp # Second bathroom visualization
+│   │   ├── IMG_0293_new.webp # Kitchen appliances visualization
+│   │   ├── IMG_0277.jpg     # Original living room photos
 │   │   ├── IMG_0279.jpg     # Kitchen photos  
 │   │   ├── IMG_0281.jpg     # Bedroom photos
 │   │   ├── IMG_0283.jpg     # Bathroom photos
@@ -57,7 +66,9 @@ Modern React-based apartment listing website built using the **padpal-finder** t
 - **Features**: Renovated, gas heating, balcony, free parking
 
 ### 🖼️ Photo Gallery
-- **24 high-quality apartment photos** including:
+- **33 high-quality images** including:
+  - **9 new visualization images** (WebP format for performance)
+  - **24 original apartment photos**
   - Living room and kitchen areas
   - All 4 bedrooms
   - Both bathrooms
@@ -65,11 +76,12 @@ Modern React-based apartment listing website built using the **padpal-finder** t
   - Building exterior and surroundings
   - Floor plan diagram
 - **Advanced Features**:
-  - Lightbox modal with full-screen viewing
-  - Thumbnail navigation
-  - Keyboard controls (arrows, ESC)
-  - Touch/swipe support for mobile
-  - Image counter and descriptions in Slovak
+  - **Fixed-size lightbox** with consistent layout (no jumping/resizing)
+  - **Keyboard navigation** (Left/Right arrows, Escape to close)
+  - **Touch/swipe support** for mobile (50px minimum swipe distance)
+  - **Thumbnail navigation** with visual feedback
+  - **Image counter** and descriptions in Slovak
+  - **Smooth transitions** between images of different aspect ratios
 
 ### 📞 Contact Integration
 - **Owner**: Patrik Magoš
@@ -78,23 +90,31 @@ Modern React-based apartment listing website built using the **padpal-finder** t
 - **Contact Form**: Inquiry form with Slovak labels
 - **CTA Button**: "Mám záujem" (I'm interested)
 
-### 🌐 Localization
-- **Language**: Full Slovak localization
-- **Content**: Property description translated from original apartment.html
+### 🌐 Localization & SEO
+- **Language**: Full Slovak localization (`lang="sk"`)
+- **Content**: Property description in Slovak with updated apartment details
 - **UI Elements**: All form labels, buttons, and navigation in Slovak
-- **SEO Ready**: Proper meta tags and alt texts
+- **SEO Optimized**: 
+  - Slovak meta title with price (386 000 €)
+  - Relevant Slovak keywords for apartment search
+  - Updated Open Graph tags with visualization image
+  - Proper Slovak locale (`sk_SK`) for social sharing
+  - Twitter Card optimization
 
 ## Component Details
 
 ### PhotoGallery.tsx
 Advanced image gallery component with:
-- Main image display with hover effects
-- Thumbnail grid (4-8 columns responsive)
-- Full-screen lightbox modal
-- Navigation arrows (prev/next)
-- Keyboard shortcuts support
-- Loading states and error handling
-- Touch/gesture support for mobile
+- **Main image display** with hover effects and smooth scaling
+- **Thumbnail grid** (4-8 columns responsive) with visual selection feedback
+- **Fixed-size lightbox modal** that prevents layout jumping between images
+- **Multiple navigation methods**:
+  - Click/touch navigation arrows
+  - **Keyboard controls** (Left/Right arrows, Escape to close)
+  - **Touch/swipe gestures** (50px minimum distance to prevent accidents)
+- **Optimized performance** with proper event cleanup
+- **Image prioritization**: Visualization images displayed first
+- **Responsive design** with consistent behavior across devices
 
 ### ContactForm.tsx
 Professional contact form featuring:
@@ -107,12 +127,13 @@ Professional contact form featuring:
 
 ### Index.tsx
 Main apartment listing page with:
-- Hero section with property title and key stats
-- Property description in Slovak
-- Features and amenities grid
-- Integrated photo gallery
-- Sticky contact form sidebar
-- Responsive 3-column layout (gallery + details + contact)
+- **Hero section** with property title, key stats, and price (386 000 €)
+- **Updated property description** in Slovak with current apartment details
+- **Features and amenities grid** with relevant icons
+- **Integrated photo gallery** featuring visualization images first
+- **Sticky contact form** sidebar for easy access
+- **Responsive 3-column layout** (gallery + details + contact)
+- **Smooth scroll** navigation to contact form
 
 ## Development Workflow
 
@@ -134,20 +155,46 @@ npm run lint        # Run ESLint
 
 ### Image Management
 - **Location**: `/public/images/` (publicly accessible)
-- **Loading**: Direct public paths (e.g., `/images/IMG_0277.jpg`)
-- **Format**: JPEG for photos, PNG for floor plan
+- **Loading**: Direct public paths (e.g., `/images/IMG_0277_new.webp`)
+- **Formats**: 
+  - **WebP** for new visualization images (better compression)
+  - **JPEG** for original apartment photos
+  - **PNG** for floor plan diagram
+- **Gallery Order**: Visualization images prioritized first, then original photos
 - **Optimization**: Vite automatically optimizes during build
 
 ## Deployment Ready
 - **Build Output**: Optimized static files in `/dist/`
 - **Hosting**: Compatible with any static hosting (Vercel, Netlify, etc.)
-- **Performance**: Lazy loading, code splitting, optimized assets
-- **SEO**: Meta tags, semantic HTML, alt texts
-- **Accessibility**: ARIA labels, keyboard navigation, color contrast
+- **Performance**: Lazy loading, code splitting, optimized assets, WebP images
+- **SEO**: Slovak-optimized meta tags, semantic HTML, descriptive alt texts
+- **Accessibility**: ARIA labels, full keyboard navigation, color contrast
+- **Modern UX**: Touch/swipe support, smooth animations, responsive design
+
+## Recent Updates
+
+### Gallery Enhancements (Latest)
+- ✅ **Added 9 visualization images** in WebP format for better performance (5 new images added recently)
+- ✅ **Fixed lightbox sizing issues** - consistent layout regardless of image dimensions
+- ✅ **Enhanced navigation** - keyboard arrows and touch/swipe support
+- ✅ **Improved UX** - smooth transitions and responsive controls
+
+### SEO & Localization Updates
+- ✅ **Updated meta tags** for Slovak apartment listing with proper keywords
+- ✅ **Enhanced Open Graph** integration with visualization image
+- ✅ **Improved social sharing** with Slovak locale and Twitter Cards
+- ✅ **Updated property description** with current apartment details
+
+### Technical Improvements
+- ✅ **Performance optimized** with WebP images and fixed-size containers
+- ✅ **Accessibility enhanced** with full keyboard navigation support
+- ✅ **Mobile-first design** with touch gestures and responsive layouts
+- ✅ **Code quality** improved with proper event cleanup and TypeScript
 
 ## Customization Points
 - **Colors**: Modify Tailwind theme in `tailwind.config.ts`
 - **Content**: Update property details in `src/pages/Index.tsx`
-- **Images**: Replace files in `/public/images/`
+- **Images**: Replace files in `/public/images/` (supports WebP, JPEG, PNG)
 - **Contact Info**: Update in `src/components/ContactForm.tsx`
+- **SEO**: Modify meta tags in `index.html`
 - **Styling**: Customize via Tailwind classes or CSS variables
