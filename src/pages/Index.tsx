@@ -32,6 +32,7 @@ const galleryImages = [
   { src: "/images/IMG_0285_new.webp", alt: "Druhá izba (vizualizácia)" },
   { src: "/images/IMG_0291_new.webp", alt: "Druhá kúpeľňa (vizualizácia)" },
   { src: "/images/IMG_0293_new.webp", alt: "Kuchynské spotrebiče (vizualizácia)" },
+  { src: "/images/IMG_0304_new.webp", alt: "Kúpeľňa - detail (vizualizácia)" },
   
   // Original apartment photos
   { src: "/images/IMG_0277.jpg", alt: "Interiér bytu - obývacia izba" },

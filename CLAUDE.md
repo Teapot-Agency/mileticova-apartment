@@ -18,7 +18,7 @@ Modern React-based apartment listing website built using the **padpal-finder** t
 ```
 /Users/patrik/Desktop/Stuff/Miletičova 2025/Web/
 ├── public/
-│   ├── images/               # 33 apartment photos + floor plan + visualizations
+│   ├── images/               # 34 apartment photos + floor plan + visualizations
 │   │   ├── IMG_0277_new.webp # Living room visualization (main preview)
 │   │   ├── IMG_0288_new.webp # Balcony visualization
 │   │   ├── IMG_0295_new.webp # Bedroom visualization
@@ -28,6 +28,7 @@ Modern React-based apartment listing website built using the **padpal-finder** t
 │   │   ├── IMG_0285_new.webp # Second room visualization
 │   │   ├── IMG_0291_new.webp # Second bathroom visualization
 │   │   ├── IMG_0293_new.webp # Kitchen appliances visualization
+│   │   ├── IMG_0304_new.webp # Bathroom detail visualization
 │   │   ├── IMG_0277.jpg     # Original living room photos
 │   │   ├── IMG_0279.jpg     # Kitchen photos  
 │   │   ├── IMG_0281.jpg     # Bedroom photos
@@ -66,8 +67,8 @@ Modern React-based apartment listing website built using the **padpal-finder** t
 - **Features**: Renovated, gas heating, balcony, free parking
 
 ### 🖼️ Photo Gallery
-- **33 high-quality images** including:
-  - **9 new visualization images** (WebP format for performance)
+- **34 high-quality images** including:
+  - **10 new visualization images** (WebP format for performance)
   - **24 original apartment photos**
   - Living room and kitchen areas
   - All 4 bedrooms
@@ -174,7 +175,7 @@ npm run lint        # Run ESLint
 ## Recent Updates
 
 ### Gallery Enhancements (Latest)
-- ✅ **Added 9 visualization images** in WebP format for better performance (5 new images added recently)
+- ✅ **Added 10 visualization images** in WebP format for better performance (6 new images added recently)
 - ✅ **Fixed lightbox sizing issues** - consistent layout regardless of image dimensions
 - ✅ **Enhanced navigation** - keyboard arrows and touch/swipe support
 - ✅ **Improved UX** - smooth transitions and responsive controls
