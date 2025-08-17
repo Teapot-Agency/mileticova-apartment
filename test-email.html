@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmailJS Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <h1>EmailJS Test</h1>
+    <button onclick="testEmail()">Test Email Send</button>
+    <div id="result"></div>
+
+    <script>
+        // Initialize EmailJS
+        emailjs.init('Lm7SsgaLLRVBDXGRa'); // Your public key
+
+        async function testEmail() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = 'Sending test email...';
+
+            try {
+                const templateParams = {
+                    from_name: 'Test User',
+                    from_email: 'test@example.com',
+                    phone: '+421 900 123 456',
+                    preferred_date: '2025-08-20',
+                    preferred_time: '14:00',
+                    message: 'This is a test message from the contact form.',
+                    property: 'Byt na Miletičovej - 4 izby, 91m²',
+                    to_email: 'patrikmko@gmail.com',
+                };
+
+                const response = await emailjs.send(
+                    'service_jm4ovrd',      // Service ID
+                    'template_upzk6l9',     // Template ID
+                    templateParams,
+                    'Lm7SsgaLLRVBDXGRa'     // Public Key
+                );
+
+                console.log('EmailJS Response:', response);
+                resultDiv.innerHTML = `✅ Email sent successfully! Status: ${response.status}`;
+                
+            } catch (error) {
+                console.error('EmailJS Error:', error);
+                resultDiv.innerHTML = `❌ Error: ${error.text || error.message}`;
+            }
+        }
+    </script>
+</body>
+</html>
