@@ -62,12 +62,12 @@ const galleryImages = [
 ];
 
 const amenities = [
-  { icon: Wifi, name: "Internetové pripojenie" },
+  { icon: Wifi, name: "Optický internet" },
   { icon: Car, name: "Bezplatné parkovanie" },
-  { icon: Shield, name: "Zabezpečený dom" },
-  { icon: Snowflake, name: "Klimatizácia možná" },
-  { icon: Zap, name: "Plynový kotol" },
-  { icon: TreePine, name: "Veľká lodžia 11m²" }
+  { icon: Shield, name: "Monitorovaná bicykliareň" },
+  { icon: Snowflake, name: "Východná lodžia 11m²" },
+  { icon: Zap, name: "Centrálne vykurovanie" },
+  { icon: TreePine, name: "Pochôdzna strecha" }
 ];
 
 const Index = () => {
@@ -117,7 +117,7 @@ const Index = () => {
                 </div>
                 <div className="flex items-center">
                   <Square className="h-5 w-5 mr-2 text-primary" />
-                  <span>91 m² + 11 m² lodžia</span>
+                  <span>92 m² + 11 m² lodžia</span>
                 </div>
               </div>
             </div>
@@ -153,18 +153,29 @@ const Index = () => {
               <h2 className="text-3xl font-bold mb-6 text-foreground">O nehnuteľnosti</h2>
               <div className="prose prose-lg text-muted-foreground leading-relaxed space-y-4">
                 <p>
-                  Tento priestranný 4‑izbový holobyt o rozlohe 91 m² sa nachádza na Miletičovej ulici v obľúbenom Ružinove. 
-                  Dispozícia ponúka veľkorysú vstupnú halu, dve samostatné izby, hlavnú spálňu so súkromnou kúpeľňou, 
-                  obývaciu izbu prepojenú s kuchyňou a jedálenským kútom, ďalšiu kúpeľňu a samostatné WC.
+                  Hľadáte komfortné mestské bývanie s dostatkom priestoru? Ponúkame na predaj 4-izbový holobyt o rozlohe 92 m² na Miletičovej ulici v bratislavskom Ružinove oblasť Nivy. Byt disponuje dvoma kúpeľňami a dvoma toaletami – rarita v tejto kategórii. Priestranná 11 m² lodžia orientovaná na východ poskytuje dostatok miesta na relax a umožňuje osadenie klimatizácie. K bytu patrí pivničná kobka 1 m².
                 </p>
                 <p>
-                  Súčasťou bytu je aj priestranná lodžia (11 m²) orientovaná na severozápad, ktorá umožňuje osadenie klimatizácie. 
-                  Byt disponuje plastovými oknami a PVC podlahami, inak je v pôvodnom stave. Vykurovanie a ohrev vody zabezpečuje vlastný plynový kotol.
+                  <strong>Dispozícia:</strong><br />
+                  Veľká vstupná hala, z nej vstup do dvoch samostatných izieb, do obývacej izby spojenej s kuchynským priestorom a jedálňou a do hlavnej spálne so súkromnou kúpeľňou. Druhá kúpeľňa a samostatné WC sú prístupné z chodby. Byt má plastové okná a PVC podlahy, pod ktorými sa nachádzajú pôvodné drevené parkety. Všetky vnútorné steny sú priečky (nenosné) – dispozíciu je možné prispôsobiť podľa potrieb. Vykurovanie je centrálne z domovej kotolne, ohrev teplej vody zabezpečuje vlastný plynový kotol; v kuchyni je plynový sporák. Internet: optický kábel.
                 </p>
                 <p>
-                  Bytový dom je tehlový, zateplený a má novú strechu. Hrubé tehlové steny (cca 50 cm) poskytujú výborný 
-                  tepelný a akustický komfort. K bytu patrí pivničná kobka (1 m²). Rezidenti môžu parkovať zdarma 
-                  vo vnútrobloku; v okolí platí rezidenčné parkovanie.
+                  <strong>Bytový dom a lokalita:</strong><br />
+                  Tehlová konštrukcia s hrúbkou stien až 50 cm zaručuje výbornú tepelnú aj akustickú izoláciu. Budova je zateplená, má novú strechu (s možnosťou využívať pochôdznu strechu), zrekonštruované spoločné priestory a 2 výťahy. Rezidenti majú k dispozícii bezplatné parkovanie vo vnútrobloku; v okolí platí rezidenčné parkovanie. V suteréne je špeciálna miestnosť na bicykle monitorovaná kamerovým systémom. V pešej dostupnosti je kompletná občianska vybavenosť: nákupné centrá Central a Nivy, zastávky električiek, trolejbusov a autobusov, školy všetkých stupňov, športoviská (Tehelné pole, Jama, NTC) a množstvo parkov. Milovníci gastronómie ocenia tržnicu Miletičova s legendárnym stánkom Phong Nam priamo pred domom. Lokalita ponúka rýchle napojenie do centra aj na obchvat.
+                </p>
+                <p>
+                  <strong>Prečo práve tento byt?</strong><br />
+                  • 91 m² úžitkovej plochy + 11 m² lodžia + 1 m² pivnica, 4 izby – pohodlné bývanie aj pre rodinu<br />
+                  • 2 kúpeľne + 2 WC – komfort a súkromie pre všetkých<br />
+                  • Východne orientovaná 11 m² lodžia; možnosť umiestniť klimatizáciu<br />
+                  • Tehlový dom po rekonštrukcii, zateplený, nová strecha; hrubé múry pre ticho a príjemnú klímu<br />
+                  • Všetky vnútorné steny priečkové – ľahká zmena dispozície podľa potrieb<br />
+                  • Optický internet; monitorovaná bicykliareň v suteréne; 2 výťahy; pochôdzna strecha<br />
+                  • Kompletná občianska vybavenosť na pešo, výborné spojenie MHD a rýchly prístup do centra<br />
+                  • Bezplatné rezidenčné parkovanie priamo vo vnútrobloku
+                </p>
+                <p>
+                  Byt je kúpou voľný a pripravený na dokončenie podľa vlastných predstáv. Pre bližšie informácie alebo dohodnutie obhliadky nás neváhajte kontaktovať.
                 </p>
               </div>
             </section>
