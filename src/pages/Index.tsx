@@ -18,6 +18,7 @@ import {
   Zap,
   TreePine
 } from "lucide-react";
+import type { FacebookPixelParams } from "@/types/facebook-pixel";
 
 // Gallery images from public folder
 
@@ -70,8 +71,30 @@ const amenities = [
   { icon: TreePine, name: "Pochôdzna strecha" }
 ];
 
+// Facebook Pixel tracking utility
+const trackFacebookEvent = (eventName: string, parameters: FacebookPixelParams = {}) => {
+  try {
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', eventName, parameters);
+    }
+  } catch (error) {
+    console.error('Facebook Pixel tracking error:', error);
+  }
+};
+
 const Index = () => {
   const scrollToContactForm = () => {
+    // Track interest button click
+    trackFacebookEvent('InitiateCheckout', {
+      content_category: 'Real Estate',
+      content_name: 'Interest Button Click',
+      property: 'Miletičova 4-room apartment',
+      property_type: '4-room apartment', 
+      location: 'Miletičova, Bratislava',
+      value: 386000,
+      currency: 'EUR'
+    });
+
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
       contactForm.scrollIntoView({ behavior: 'smooth', block: 'start' });

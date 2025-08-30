@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Calendar, Clock, User, Phone, Mail, MessageSquare, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
+import type { FacebookPixelParams } from "@/types/facebook-pixel";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Meno musí mať aspoň 2 znaky"),
@@ -30,6 +31,17 @@ const contactFormSchema = z.object({
 });
 
 type ContactFormData = z.infer<typeof contactFormSchema>;
+
+// Facebook Pixel tracking utility
+const trackFacebookEvent = (eventName: string, parameters: FacebookPixelParams = {}) => {
+  try {
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', eventName, parameters);
+    }
+  } catch (error) {
+    console.error('Facebook Pixel tracking error:', error);
+  }
+};
 
 const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -55,6 +67,27 @@ const ContactForm = () => {
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
     return tomorrow.toISOString().split('T')[0];
+  };
+
+  // Contact link tracking handlers
+  const handlePhoneClick = () => {
+    trackFacebookEvent('Contact', {
+      content_category: 'Real Estate',
+      content_name: 'Phone Contact',
+      property: 'Miletičova 4-room apartment',
+      location: 'Miletičova, Bratislava',
+      contact_method: 'phone'
+    });
+  };
+
+  const handleEmailClick = () => {
+    trackFacebookEvent('Contact', {
+      content_category: 'Real Estate', 
+      content_name: 'Email Contact',
+      property: 'Miletičova 4-room apartment',
+      location: 'Miletičova, Bratislava',
+      contact_method: 'email'
+    });
   };
 
   const onSubmit = async (data: ContactFormData) => {
@@ -91,6 +124,18 @@ const ContactForm = () => {
         templateParams,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
+
+      // Track successful form submission
+      trackFacebookEvent('Lead', {
+        content_category: 'Real Estate',
+        content_name: 'Apartment Contact Form',
+        property: 'Miletičova 4-room apartment',
+        property_type: '4-room apartment',
+        location: 'Miletičova, Bratislava',
+        contact_method: 'form',
+        value: 386000,
+        currency: 'EUR'
+      });
 
       setSubmitStatus("success");
       reset();
@@ -259,6 +304,7 @@ const ContactForm = () => {
                 <a 
                   href="tel:+421948994733" 
                   className="flex items-center justify-center text-primary hover:text-primary/80"
+                  onClick={handlePhoneClick}
                 >
                   <Phone className="h-4 w-4 mr-2" />
                   +421 948 994 733
@@ -266,6 +312,7 @@ const ContactForm = () => {
                 <a 
                   href="mailto:patrikmko@gmail.com" 
                   className="flex items-center justify-center text-primary hover:text-primary/80"
+                  onClick={handleEmailClick}
                 >
                   <Mail className="h-4 w-4 mr-2" />
                   patrikmko@gmail.com
