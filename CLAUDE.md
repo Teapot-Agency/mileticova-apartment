@@ -3,7 +3,7 @@
 ## Project Overview
 Modern React-based apartment listing website built using the **padpal-finder** template. Features professional photo gallery, Slovak localization, and contact integration for a 4-room apartment in Bratislava.
 
-**Live URL**: `http://localhost:8080/`
+**Live URL**: `https://byt.teapot.sk/`
 
 ## Technology Stack
 - **React 18** + **TypeScript** - Modern UI framework with type safety
@@ -164,9 +164,15 @@ npm run lint        # Run ESLint
 - **Gallery Order**: Visualization images prioritized first, then original photos
 - **Optimization**: Vite automatically optimizes during build
 
-## Deployment Ready
+## Deployment Setup
+- **Hosting**: Deployed on **Vercel** (vercel.com)
+- **Source**: Automatically deployed from GitHub repository
+- **Environment Variables**: Configured in Vercel dashboard
+  - `VITE_EMAILJS_SERVICE_ID=service_jm4ovrd`
+  - `VITE_EMAILJS_PUBLIC_KEY=Lm7SsgaLLRVBDXGRa`
+  - `VITE_EMAILJS_TEMPLATE_ID=template_upzk6l9` ⚠️ **Correct template ID** (not template_upzk6l92)
+  - `VITE_EMAILJS_PRIVATE_KEY=52LeZ3HkrPeyn-Yt36y1I`
 - **Build Output**: Optimized static files in `/dist/`
-- **Hosting**: Compatible with any static hosting (Vercel, Netlify, etc.)
 - **Performance**: Lazy loading, code splitting, optimized assets, WebP images
 - **SEO**: Slovak-optimized meta tags, semantic HTML, descriptive alt texts
 - **Accessibility**: ARIA labels, full keyboard navigation, color contrast
